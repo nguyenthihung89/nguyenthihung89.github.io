@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>NProgress 5s</title>
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
 </head>
 <body>
   we're going to build something amazing
+  
   <script>
+    // Cấu hình tốc độ chạy nhanh hơn (tùy chọn)
+    NProgress.configure({ trickleSpeed: 40 });
+    
+    // Bắt đầu
     NProgress.start();
+
+    // Thiết lập tiến trình đạt 100% sau 5 giây
     setTimeout(() => {
       NProgress.done();
-    }, 3132);
+    }, 5000);
   </script>
 </body>
 </html>
